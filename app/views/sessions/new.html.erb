@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Login Page</h1>
+
+    <form action="/session" method="post">
+      <input type="hidden"
+      name = "authenticity_token"
+      value = "<%= form_authenticity_token %>">
+
+      <label for="user_name">
+        User Name:
+        <input id="user_name" type="text" name="user[user_name]">
+      </label>
+
+      <label for="password">
+        Password: (must be 6 characters or longer)
+        <input id="password" type="text" name="user[password]">
+      </label>
+
+      <input type="submit" value="Log in!">
+    </form>
+  </body>
+</html>
